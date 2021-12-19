@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Inject script and chart",
+  "description": "This extension will eject new script tag into dom",
+  "version": "1.0",
+  "web_accessible_resources": ["js/**/*"],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["test.js"]
+    }
+  ]
+}
